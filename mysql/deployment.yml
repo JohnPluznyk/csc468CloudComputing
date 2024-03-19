@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: DOCKER_USER/DOCKER_APP:BUILD_NUMBER
+        image: johnpluznyk/mysql_john:latest
         resources:
           requests:
             cpu: 10m
