@@ -1,13 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-svc
+  name: mysql-service
 spec:
   selector:
-    role: app
+    app: mysql
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
-      nodePort: 32000
-  type: NodePort
+      port: 3306
+      targetPort: 3306
+  type: LoadBalancer
