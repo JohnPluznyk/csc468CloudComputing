@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql_john
-  labels:
-    role: app
+  name: mysql-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      role: app
+      app: mysql
   template:
     metadata:
       labels:
-        role: app
+        app: mysql
     spec:
       containers:
-      - name: app
+      - name: mysql
         image: johnpluznyk/mysql_john:latest
-        resources:
-          requests:
-            cpu: 10m
+        ports:
+        - containerPort: 3306
+        env:
+        - name: password
+          value: <password>
