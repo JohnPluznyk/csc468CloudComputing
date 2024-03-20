@@ -11,4 +11,4 @@ spec:
       port: 3306
       targetPort: 3306
       nodePort: 30000  # Specify the desired NodePort value
-  type: NodePort  # Change the type to NodePo
+  type: NodePort  # Change the type to NodePort
