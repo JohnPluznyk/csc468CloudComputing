@@ -1,11 +1,11 @@
 version: "3"
 # Need to make my own changes
 services:
-  webui:
-    build: webui
-    image: 127.0.0.1:30000/webui:v0.1
+  MySQL:
+    build: mysql_config
+    image: 127.0.0.1:30000/mysql:v0.1
     ports:
-    - "8000:80"
+    - "3306:3306"
 
   redis:
     image: redis
