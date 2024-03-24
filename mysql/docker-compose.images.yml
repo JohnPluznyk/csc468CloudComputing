@@ -6,12 +6,6 @@ services:
     image: 127.0.0.1:30000/mysql:v0.1
     ports:
     - "3306:3306"
-
-  redis:
-    image: redis
-
-  worker:
-    build: worker
-    image: 127.0.0.1:30000/worker:v0.1
     deploy:
-      replicas: 10
+      mode: global
+# CONTINUTE TO EDIT FILE FROM HERE
