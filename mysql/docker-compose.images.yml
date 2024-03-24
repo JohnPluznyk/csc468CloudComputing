@@ -1,5 +1,5 @@
 version: "3"
-# Need to make my own changes
+
 services:
   mysql:
     build: mysql_config
